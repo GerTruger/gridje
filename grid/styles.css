@@ -16,14 +16,6 @@
   background-color: greenyellow;
   grid-area: footer;
 }
-/* .grid-item5 {
-  grid-area: aside;
-  background-color: blue;
-}
-.grid-item6 {
-  grid-area: aside1;
-} */
-
 .grid-container {
   display: grid;
   grid-template-areas:
@@ -46,8 +38,92 @@ grid-template-columns: repeat(3, 1fr);
 body {
   background-color: black;
 }
-@media screen and (min-width : 600px ){
-  body {
-    background-color: lightgreen;
-  } 
 
+@media screen and (min-width : 700px ){
+body 
+    {
+     background-color: lightgreen;
+    }
+ 
+.grid-item1
+    {
+     grid-area: header;
+     background-color: red;
+    }
+.grid-item3
+    {
+     height: 300px;
+     background-color: yellow;
+     grid-area: menu;
+    }
+.grid-item2 
+    {
+     height: 150px;
+     grid-area: main;
+     background-color: blue;
+    }
+.grid-item4
+    {
+     background-color: green;
+     grid-area: footer;
+    }
+
+.grid-container 
+    {
+      display: grid;
+      grid-template-areas:
+        "header  menu menu"
+        "header menu menu "
+        "header main main  " 
+        "header footer footer ";
+
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      background-color: #2196f3;
+      padding: 10px;
+    }
+}
+
+ @media screen and (min-width : 1024px ) {
+
+body
+    {
+      background-color: white;
+    }
+.grid-item1 
+    {
+      grid-area: header;
+      background-color: green;
+    }
+.grid-item3
+    {
+      height:400px;
+      background-color: blue;
+      grid-area: menu;
+    }
+.grid-item2 
+    {
+      height: auto;
+      grid-area: main;
+      background-color: red;
+    }
+.grid-item4 
+    {
+      background-color: yellow;
+      grid-area: footer;
+    }
+.grid-container
+    {
+    display: grid;
+    grid-template-areas:
+      "header menu menu main"
+      "header menu menu main "
+      "header menu menu main  " 
+      "header footer footer main ";
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    background-color: #2196f3;
+    padding: 10px;
+    height:100%;
+    }
+  }
